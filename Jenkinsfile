@@ -1,11 +1,10 @@
-import sys
 
 pipeline {
     agent any 
     stages {
         stage('Build') { 
             steps {
-                print(sys.path)
+                println 'Build'
             }
         }
         stage('Test') { 
