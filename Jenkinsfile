@@ -1,15 +1,16 @@
 
 pipeline {
-    agent any 
+   agent {
+        node {
+            label ‘master’
+            customWorkspace "${env.JOB_NAME}/${env.BUILD_NUMBER}"
+        }
+    }
+
     stages {
         stage('Build') { 
             steps {
-                step{
-                    println 'step1'
-                }
-                step{
-                    println 'step2'
-                }
+                println 'build'
             }
         }
         stage('Test') { 
