@@ -1,9 +1,11 @@
+import sys
+
 pipeline {
     agent any 
     stages {
         stage('Build') { 
             steps {
-                sh "echo Build" 
+                print(sys.path)
             }
         }
         stage('Test') { 
