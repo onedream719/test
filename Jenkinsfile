@@ -4,10 +4,10 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                step('step1'){
+                step{
                     println 'step1'
                 }
-                step('step2'){
+                step{
                     println 'step2'
                 }
             }
