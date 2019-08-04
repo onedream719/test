@@ -4,7 +4,12 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                println 'Build'
+                step('step1'){
+                    println 'step1'
+                }
+                step('step2'){
+                    println 'step2'
+                }
             }
         }
         stage('Test') { 
